@@ -389,14 +389,12 @@ LLTextEditor::LLTextEditor(
 	LLMenuGL* menu = LLUICtrlFactory::getInstance()->buildMenu("menu_rightclick_text.xml",this);
 	if (!menu)
 	{
-	          menu = new LLMenuGL(LLStringUtil::null);
+		menu = new LLMenuGL(LLStringUtil::null);
 	}
 
 	defineMenuCallbacks(menu);
 	mPopupMenuHandle = menu->getHandle();
-	menu->setBorderColor(gColors.getColor("MenuItemDisabledColor"));
 	menu->setBackgroundColor(gColors.getColor("MenuPopupBgColor"));
-
 }
 
 LLTextEditor::~LLTextEditor()
@@ -3869,6 +3867,12 @@ void LLTextEditor::onTabInto()
 // virtual
 void LLTextEditor::clear()
 {
+	// Also clear any styling we might have added -- MC
+	mParseHTML = FALSE;
+	mParseHighlights = FALSE;
+
+	mSegments.clear();
+
 	setText(LLStringUtil::null);
 	std::for_each(mSegments.begin(), mSegments.end(), DeletePointer());
 	mSegments.clear();
