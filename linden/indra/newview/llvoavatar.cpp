@@ -85,7 +85,7 @@
 #include "llgesturemgr.h" //needed to trigger the voice gesticulations
 #include "llvoiceclient.h"
 #include "llvoicevisualizer.h" // Ventrella
-
+#include "llphysicsmotion.h"
 #include "llsdserialize.h" // client resolver
 
 #if LL_WINDOWS
@@ -774,7 +774,11 @@ LLVOAvatar::LLVOAvatar(const LLUUID& id,
 	mFullyLoaded(FALSE),
 	mHasBakedHair( FALSE ),
 	mSupportsAlphaLayers(FALSE),
+#ifdef OLD_BREAST_PHYSICS
 	mFirstSetActualBoobGravRan( false ),
+#endif
+	mSupportsPhysics( false )
+
 	mFirstSetActualButtGravRan( false ),
 	mFirstSetActualFatGravRan( false )
 {
