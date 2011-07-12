@@ -89,7 +89,9 @@ public:
 	void startDefaultMotions();
 
 	static void updateImpostors();
-
+	
+// EmeraldBoobUtils
+	bool mSupportsPhysics; //Client supports v2 wearable physics. Disable emerald physics.
 	//--------------------------------------------------------------------
 	// LLViewerObject interface
 	//--------------------------------------------------------------------

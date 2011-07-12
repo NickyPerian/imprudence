@@ -36,6 +36,7 @@
 #include "llviewervisualparam.h"
 
 class LLVOAvatar;
+class LLPhysicsMotion;
 
 //-----------------------------------------------------------------------------
 

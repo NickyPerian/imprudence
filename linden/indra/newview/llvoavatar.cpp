@@ -779,8 +779,8 @@ LLVOAvatar::LLVOAvatar(const LLUUID& id,
 #endif
 	mSupportsPhysics( false )
 
-	mFirstSetActualButtGravRan( false ),
-	mFirstSetActualFatGravRan( false )
+//	mFirstSetActualButtGravRan( false ),
+//	mFirstSetActualFatGravRan( false )
 {
 	LLMemType mt(LLMemType::MTYPE_AVATAR);
 	//VTResume();  // VTune
