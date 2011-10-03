@@ -1143,15 +1143,6 @@ void LLPluginClassMedia::setBrowserUserAgent(const std::string& user_agent)
 	sendMessage(message);
 }
 
-#if LL_WINDOWS
-void LLPluginClassMedia::showConsole()
-{
-	LLPluginMessage message(LLPLUGIN_MESSAGE_CLASS_INTERNAL, "show_console");
-
-	sendMessage(message);
-}
-#endif
-
 void LLPluginClassMedia::crashPlugin()
 {
 	LLPluginMessage message(LLPLUGIN_MESSAGE_CLASS_INTERNAL, "crash");
